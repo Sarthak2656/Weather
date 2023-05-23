@@ -43,7 +43,7 @@ app.post("/",function(req,res)
 
 /*
     const query="Kolkata";
-    const apikey="98cfd2ee1bdb3415c98627fa428ff3e5";
+  
     const unit="metric"
     const url="https://api.openweathermap.org/data/2.5/weather?q="+query+"&appid="+apikey+"&units="+unit+"";
     

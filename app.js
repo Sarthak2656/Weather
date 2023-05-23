@@ -44,9 +44,9 @@ app.post("/",function(req,res)
             res.write("<h2>Feels like "+flike+"</h2>");
             res.write("<h2>Max Temperature: "+tmax+"degree celcius</h2>");
             res.write("<h2>Min Temperature: "+tmin+" degree celcius</h2>");
-            res.write("<h2>Humidity: "+hdity+"</h2>");
-            res.write("<h2>Visibility: "+vis+"km</h2>");
-            res.write("<h2>Wind speed "+wspd+"kmph</h2>");
+            res.write("<h2>Humidity: "+hdity+" %</h2>");
+            res.write("<h2>Visibility: "+vis+" m</h2>");
+            res.write("<h2>Wind speed "+wspd+" kmph</h2>");
             res.send();
         })
     });

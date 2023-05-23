@@ -28,12 +28,25 @@ app.post("/",function(req,res)
             const temp=weatherData.main.temp;
             console.log(temp);
             const desc=weatherData.weather[0].description;
+            const flike=weatherData.main.feels_like;
+            const tmin=weatherData.main.temp_min;
+            const tmax=weatherData.main.temp_max;
+            const hdity=weatherData.main.humidity;
+            const vis=weatherData.visibility;
+            const wspd=weatherData.wind.speed;
+
             console.log(desc);
             const icon=weatherData.weather[0].icon;
             const imgUrl="https://openweathermap.org/img/wn/"+icon+"@2x.png";    
             res.write("<h1>The temperature in "+query+" is "+temp+" degree celcius</h1>");
             res.write("<h3>The weather is currently "+desc+"</h3>");
             res.write("<img src="+imgUrl+">");
+            res.write("<h2>Feels like "+flike+"</h2>");
+            res.write("<h2>Max Temperature: "+tmax+"degree celcius</h2>");
+            res.write("<h2>Min Temperature: "+tmin+" degree celcius</h2>");
+            res.write("<h2>Humidity: "+hdity+"</h2>");
+            res.write("<h2>Visibility: "+vis+"km</h2>");
+            res.write("<h2>Wind speed "+wspd+"kmph</h2>");
             res.send();
         })
     });
